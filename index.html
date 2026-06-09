@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Website Resmi Nagari Silongo, Kecamatan Lubuk Tarok, Kabupaten Sijunjung, Sumatera Barat." />
+  <title>Website Resmi Nagari Silongo</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- TAILWIND CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CUSTOM STYLES -->
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Poppins', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+<!-- ============================================================
+     LOADING ANIMATION
+     ============================================================ -->
+<div id="pageLoader" style="
+  position:fixed;inset:0;z-index:9999;
+  background:#0f2b1e;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:20px;">
+  <div style="font-size:42px;">🌿</div>
+  <div style="color:white;font-family:Poppins,sans-serif;font-size:22px;font-weight:700;">Nagari Silongo</div>
+  <div style="width:48px;height:4px;background:rgba(255,255,255,0.15);border-radius:4px;overflow:hidden;">
+    <div style="height:100%;background:#d4a017;border-radius:4px;animation:load 0.9s ease-in-out forwards;">
+    </div>
+  </div>
+  <style>@keyframes load{from{width:0%}to{width:100%}}</style>
+</div>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<header id="navbar">
+  <div class="nav-container">
+    <!-- Logo -->
+    <a href="#beranda" class="nav-logo">
+      <div class="nav-logo-icon">🌿</div>
+      <div>
+        <div class="nav-logo-text">Nagari Silongo</div>
+        <div class="nav-sub">Pemerintah Nagari</div>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Menu -->
+    <ul class="nav-menu">
+      <li><a class="nav-link" href="#beranda">Beranda</a></li>
+      <li><a class="nav-link" href="#profil">Profil Nagari</a></li>
+      <li><a class="nav-link" href="#pemerintahan">Pemerintahan</a></li>
+      <li><a class="nav-link" href="#potensi">Potensi Desa</a></li>
+      <li><a class="nav-link" href="#wisata">Wisata &amp; Budaya</a></li>
+      <li><a class="nav-link" href="#berita">Berita</a></li>
+      <li><a class="nav-link" href="#galeri">Galeri</a></li>
+      <li><a class="nav-link" href="#kontak">Kontak</a></li>
+    </ul>
+
+    <!-- Mobile Hamburger Button -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#beranda">Beranda</a>
+    <a href="#profil">Profil Nagari</a>
+    <a href="#pemerintahan">Pemerintahan</a>
+    <a href="#potensi">Potensi Desa</a>
+    <a href="#wisata">Wisata &amp; Budaya</a>
+    <a href="#berita">Berita</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section id="beranda">
+  <!-- Background Image: ganti gambar1.png dengan foto hero Anda -->
+  <div class="hero-bg" style="background-image:url('assets/images/gambar1.png');background-size:cover;background-position:center;background-repeat:no-repeat;">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <!-- Badge -->
+    <div class="hero-badge">Website Resmi Pemerintahan Nagari</div>
+
+    <!-- Main Title -->
+    <h1 class="hero-title">Nagari Silongo</h1>
+
+    <!-- Subtitle -->
+    <p class="hero-subtitle">
+      <span>Kecamatan Lubuk Tarok</span>
+      <span class="sep">·</span>
+      <span>Kabupaten Sijunjung</span>
+      <span class="sep">·</span>
+      <span>Sumatera Barat</span>
+    </p>
+
+    <!-- Description -->
+    <p class="hero-desc">
+      Portal informasi resmi Nagari Silongo yang menyajikan profil nagari, pemerintahan,
+      potensi daerah, budaya, dan informasi masyarakat secara modern dan transparan.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="hero-buttons">
+      <a href="#profil" class="btn-primary">Jelajahi Nagari</a>
+      <a href="#berita" class="btn-outline">Lihat Informasi</a>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-arrow">&#8595;</div>
+  </div>
+
+  <!-- Wave Divider -->
+  <div class="hero-wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="height:80px;width:100%;">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,123.82,198.39,108.19Z"
+        fill="#f1f8f4"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- ============================================================
+     STATISTIK DESA SECTION
+     ============================================================ -->
+<section id="statistik">
+  <div class="stats-grid stagger">
+    <!-- Jumlah Penduduk -->
+    <div class="stat-card reveal">
+      <div class="stat-icon">&#128101;</div>
+      <div class="stat-number"><span data-count="839">0</span></div>
+      <div style="font-size:13px;font-weight:600;color:var(--primary);margin-bottom:4px;">Jiwa</div>
+      <div class="stat-label">Jumlah Penduduk</div>
+    </div>
+    <!-- Jumlah Jorong -->
+    <div class="stat-card reveal">
+      <div class="stat-icon">&#128506;</div>
+      <div class="stat-number"><span data-count="3">0</span></div>
+      <div style="font-size:13px;font-weight:600;color:var(--primary);margin-bottom:4px;">Jorong</div>
+      <div class="stat-label">Jumlah Jorong</div>
+    </div>
+    <!-- Luas Wilayah -->
+    <div class="stat-card reveal">
+      <div class="stat-icon">&#127758;</div>
+      <div class="stat-number"><span data-count="13.4" data-float>0</span></div>
+      <div style="font-size:13px;font-weight:600;color:var(--primary);margin-bottom:4px;">km²</div>
+      <div class="stat-label">Luas Wilayah</div>
+    </div>
+    <!-- Potensi UMKM -->
+    <div class="stat-card reveal">
+      <div class="stat-icon">&#128200;</div>
+      <div class="stat-number"><span data-count="25">0</span>+</div>
+      <div style="font-size:13px;font-weight:600;color:var(--primary);margin-bottom:4px;">Usaha</div>
+      <div class="stat-label">Potensi UMKM</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROFIL NAGARI SECTION
+     ============================================================ -->
+<section id="profil">
+  <div class="profil-grid">
+
+    <!-- Left: Foto Profil Nagari — ganti gambar2.png dengan foto asli -->
+    <div class="profil-art reveal-left" style="overflow:hidden;border-radius:20px;position:relative;">
+      <img src="assets/images/gambar2.png" alt="Profil Nagari Silongo"
+        style="width:100%;height:100%;object-fit:cover;display:block;min-height:380px;" />
+      <!-- Label Overlay -->
+      <div class="rg-label">
+        <div class="rg-label-sub">Identitas Nagari</div>
+        <div class="rg-label-title">Budaya &amp; Alam</div>
+      </div>
+    </div>
+
+    <!-- Right: Content -->
+    <div class="reveal-right">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;background:rgba(212,160,23,0.12);color:var(--gold);font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:20px;">
+        <span style="width:6px;height:6px;background:var(--gold);border-radius:50%;display:inline-block;"></span>
+        Profil Nagari
+      </div>
+
+      <h2 style="font-size:clamp(28px,4vw,44px);font-weight:800;color:var(--text);margin-bottom:20px;line-height:1.1;letter-spacing:-0.5px;">
+        Mengenal Nagari<br><span style="color:var(--primary);">Silongo</span>
+      </h2>
+
+      <p class="profil-text">
+        Nagari Silongo merupakan salah satu nagari di Kecamatan Lubuk Tarok, Kabupaten Sijunjung,
+        Sumatera Barat yang memiliki potensi alam, budaya Minangkabau, serta kehidupan masyarakat
+        yang masih menjunjung tinggi adat dan nilai kebersamaan.
+      </p>
+
+      <!-- Info Badges -->
+      <div class="profil-badge-row">
+        <div class="profil-info-badge">
+          <span class="badge-icon">📅</span>
+          <span>Nagari Definitif</span>
+        </div>
+        <div class="profil-info-badge">
+          <span class="badge-icon">🧭</span>
+          <span>Kec. Lubuk Tarok</span>
+        </div>
+        <div class="profil-info-badge">
+          <span class="badge-icon">📍</span>
+          <span>Kab. Sijunjung</span>
+        </div>
+      </div>
+
+      <!-- Baca Selengkapnya Button -->
+      <button id="btnProfilModal" class="btn-primary" style="border-radius:999px;">
+        Baca Selengkapnya
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PEMERINTAHAN SECTION
+     ============================================================ -->
+<section id="pemerintahan">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+
+    <!-- Section Header -->
+    <div class="section-header reveal">
+      <div class="section-badge">Struktur Organisasi</div>
+      <h2 class="section-title">Pemerintahan <span>Nagari</span></h2>
+      <p class="section-desc">
+        Aparatur pemerintahan Nagari Silongo yang berdedikasi melayani dan membangun masyarakat
+        dengan prinsip transparansi dan gotong royong.
+      </p>
+    </div>
+
+    <!-- Officials Grid -->
+    <div class="pemerintahan-grid stagger">
+
+      <!-- Wali Nagari -->
+      <div class="official-card reveal">
+        <div class="official-avatar">AS</div>
+        <div class="official-name">Plt. Bpk. Ahmad Syahril</div>
+        <div class="official-title">Wali Nagari</div>
+      </div>
+
+      <!-- Sekretaris -->
+      <div class="official-card reveal">
+        <div class="official-avatar">RH</div>
+        <div class="official-name">Bpk. Rudi Hartono</div>
+        <div class="official-title">Sekretaris Nagari</div>
+      </div>
+
+      <!-- Kepala Jorong -->
+      <div class="official-card reveal">
+        <div class="official-avatar">ZF</div>
+        <div class="official-name">Bpk. Zulfahmi</div>
+        <div class="official-title">Kepala Jorong Koto Ranah</div>
+      </div>
+
+      <!-- Ketua BAMUS -->
+      <div class="official-card reveal">
+        <div class="official-avatar">HS</div>
+        <div class="official-name">Bpk. Hamid Sutan</div>
+        <div class="official-title">Ketua BAMUS</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     POTENSI DESA SECTION
+     ============================================================ -->
+<section id="potensi">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+
+    <!-- Section Header -->
+    <div class="section-header reveal">
+      <div class="section-badge">Potensi Nagari</div>
+      <h2 class="section-title">Kekayaan <span>Daerah</span></h2>
+      <p class="section-desc">
+        Sumber daya alam dan manusia yang menjadi motor penggerak perekonomian dan pembangunan Nagari Silongo.
+      </p>
+    </div>
+
+    <!-- Potensi Grid -->
+    <div class="potensi-grid stagger">
+
+      <!-- Pertanian -->
+      <div class="potensi-card reveal">
+        <div class="potensi-icon" style="background:#dcfce7;">🌾</div>
+        <h3 class="potensi-title">Pertanian</h3>
+        <p class="potensi-desc">Lahan pertanian subur dengan hasil padi dan tanaman palawija yang melimpah sepanjang tahun.</p>
+      </div>
+
+      <!-- UMKM -->
+      <div class="potensi-card reveal">
+        <div class="potensi-icon" style="background:#dbeafe;">🏪</div>
+        <h3 class="potensi-title">UMKM</h3>
+        <p class="potensi-desc">25+ usaha mikro kecil dan menengah aktif yang terus berkembang dan berinovasi.</p>
+      </div>
+
+      <!-- Wisata Alam -->
+      <div class="potensi-card reveal">
+        <div class="potensi-icon" style="background:#ccfbf1;">🏔️</div>
+        <h3 class="potensi-title">Wisata Alam</h3>
+        <p class="potensi-desc">Keindahan alam perbukitan dan sungai alami yang menawarkan pengalaman ekowisata.</p>
+      </div>
+
+      <!-- Budaya Minangkabau -->
+      <div class="potensi-card reveal">
+        <div class="potensi-icon" style="background:#fef9c3;">🏛️</div>
+        <h3 class="potensi-title">Budaya Minangkabau</h3>
+        <p class="potensi-desc">Tradisi dan adat Minangkabau yang masih terjaga dan menjadi kebanggaan masyarakat.</p>
+      </div>
+
+      <!-- Peternakan -->
+      <div class="potensi-card reveal">
+        <div class="potensi-icon" style="background:#ffe4e6;">🐄</div>
+        <h3 class="potensi-title">Peternakan</h3>
+        <p class="potensi-desc">Peternakan sapi dan unggas sebagai sumber ekonomi andalan warga nagari.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WISATA & BUDAYA SECTION — CAROUSEL
+     ============================================================ -->
+<section id="wisata">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+
+    <!-- Section Header -->
+    <div class="section-header reveal">
+      <div class="section-badge">Jelajahi Keindahan</div>
+      <h2 class="section-title">Wisata &amp; <span>Budaya</span></h2>
+      <p class="section-desc">
+        Kekayaan alam dan budaya Minangkabau yang menjadi kebanggaan Nagari Silongo.
+      </p>
+    </div>
+
+    <!-- Carousel -->
+    <div class="carousel-wrapper reveal">
+      <!-- Main Slides -->
+      <div class="carousel-track-container">
+        <div class="carousel-track" id="carouselTrack">
+
+          <!-- Slide 1: Rumah Gadang -->
+          <div class="carousel-slide">
+            <div class="carousel-slide-inner">
+              <!-- gambar3.png = slide 1; ganti dengan foto asli -->
+              <img src="assets/images/gambar3.png" alt="Slide 1" class="slide-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;" />
+              <div class="slide-pattern"></div>
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <div class="slide-num" id="slideNum">1 / 5</div>
+                <h3 class="slide-title">Rumah Gadang</h3>
+                <p class="slide-desc">Arsitektur khas Minangkabau yang megah</p>
+                <span class="slide-cta">Lihat Detail &#8594;</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Sawah Terasering -->
+          <div class="carousel-slide">
+            <div class="carousel-slide-inner">
+              <!-- gambar4.png = slide 2; ganti dengan foto asli -->
+              <img src="assets/images/gambar4.png" alt="Slide 2" class="slide-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;" />
+              <div class="slide-pattern"></div>
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <div class="slide-num">2 / 5</div>
+                <h3 class="slide-title">Sawah Terasering</h3>
+                <p class="slide-desc">Hamparan sawah hijau yang menakjubkan</p>
+                <span class="slide-cta">Lihat Detail &#8594;</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Sungai Jernih -->
+          <div class="carousel-slide">
+            <div class="carousel-slide-inner">
+              <!-- gambar5.png = slide 3; ganti dengan foto asli -->
+              <img src="assets/images/gambar5.png" alt="Slide 3" class="slide-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;" />
+              <div class="slide-pattern"></div>
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <div class="slide-num">3 / 5</div>
+                <h3 class="slide-title">Sungai Jernih</h3>
+                <p class="slide-desc">Sungai alami dengan air bersih dan jernih</p>
+                <span class="slide-cta">Lihat Detail &#8594;</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Tradisi Minangkabau -->
+          <div class="carousel-slide">
+            <div class="carousel-slide-inner">
+              <!-- gambar6.png = slide 4; ganti dengan foto asli -->
+              <img src="assets/images/gambar6.png" alt="Slide 4" class="slide-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;" />
+              <div class="slide-pattern"></div>
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <div class="slide-num">4 / 5</div>
+                <h3 class="slide-title">Tradisi Minangkabau</h3>
+                <p class="slide-desc">Upacara adat dan tradisi yang diwariskan</p>
+                <span class="slide-cta">Lihat Detail &#8594;</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5: Kesenian Daerah -->
+          <div class="carousel-slide">
+            <div class="carousel-slide-inner">
+              <!-- gambar7.png = slide 5; ganti dengan foto asli -->
+              <img src="assets/images/gambar7.png" alt="Slide 5" class="slide-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;" />
+              <div class="slide-pattern"></div>
+              <div class="slide-overlay"></div>
+              <div class="slide-content">
+                <div class="slide-num">5 / 5</div>
+                <h3 class="slide-title">Kesenian Daerah</h3>
+                <p class="slide-desc">Tari dan musik tradisional Minangkabau</p>
+                <span class="slide-cta">Lihat Detail &#8594;</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /carousel-track -->
+
+        <!-- Navigation Arrows -->
+        <button class="carousel-btn carousel-btn-prev" id="carouselPrev" aria-label="Sebelumnya">&#8592;</button>
+        <button class="carousel-btn carousel-btn-next" id="carouselNext" aria-label="Berikutnya">&#8594;</button>
+      </div><!-- /carousel-track-container -->
+
+      <!-- Dots -->
+      <div class="carousel-dots">
+        <button class="carousel-dot active" aria-label="Slide 1"></button>
+        <button class="carousel-dot" aria-label="Slide 2"></button>
+        <button class="carousel-dot" aria-label="Slide 3"></button>
+        <button class="carousel-dot" aria-label="Slide 4"></button>
+        <button class="carousel-dot" aria-label="Slide 5"></button>
+      </div>
+
+      <!-- Thumbnails -->
+      <div class="carousel-thumbs">
+        <div class="carousel-thumb active">
+          <img src="assets/images/gambar3.png" alt="Thumb 1" class="carousel-thumb-bg" style="object-fit:cover;width:100%;height:100%;border-radius:8px;" />
+          <div class="carousel-thumb-label">Rumah Gadang</div>
+        </div>
+        <div class="carousel-thumb">
+          <img src="assets/images/gambar4.png" alt="Thumb 2" class="carousel-thumb-bg" style="object-fit:cover;width:100%;height:100%;border-radius:8px;" />
+          <div class="carousel-thumb-label">Sawah</div>
+        </div>
+        <div class="carousel-thumb">
+          <img src="assets/images/gambar5.png" alt="Thumb 3" class="carousel-thumb-bg" style="object-fit:cover;width:100%;height:100%;border-radius:8px;" />
+          <div class="carousel-thumb-label">Sungai</div>
+        </div>
+        <div class="carousel-thumb">
+          <img src="assets/images/gambar6.png" alt="Thumb 4" class="carousel-thumb-bg" style="object-fit:cover;width:100%;height:100%;border-radius:8px;" />
+          <div class="carousel-thumb-label">Tradisi</div>
+        </div>
+        <div class="carousel-thumb">
+          <img src="assets/images/gambar7.png" alt="Thumb 5" class="carousel-thumb-bg" style="object-fit:cover;width:100%;height:100%;border-radius:8px;" />
+          <div class="carousel-thumb-label">Kesenian</div>
+        </div>
+      </div>
+    </div><!-- /carousel-wrapper -->
+  </div>
+</section>
+
+<!-- ============================================================
+     BERITA SECTION
+     ============================================================ -->
+<section id="berita">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+
+    <!-- Section Header -->
+    <div class="section-header reveal">
+      <div class="section-badge">Informasi Terkini</div>
+      <h2 class="section-title">Berita <span>Nagari</span></h2>
+      <p class="section-desc">
+        Informasi terkini seputar kegiatan, pembangunan, dan kehidupan masyarakat Nagari Silongo.
+      </p>
+    </div>
+
+    <!-- Berita Grid -->
+    <div class="berita-grid stagger">
+
+      <!-- Berita 1 -->
+      <article class="berita-card reveal">
+        <div class="berita-thumb">
+          <!-- gambar8.png = berita 1; ganti dengan foto asli -->
+          <img src="assets/images/gambar8.png" alt="Berita 1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="berita-category" style="color:#15803d;">Kegiatan</span>
+        </div>
+        <div class="berita-body">
+          <div class="berita-date">📅 15 Mei 2025</div>
+          <h3 class="berita-title">Gotong Royong Bersihkan Nagari</h3>
+          <p class="berita-excerpt">Seluruh warga Nagari Silongo bahu-membahu membersihkan fasilitas umum, drainase, dan lingkungan sekitar jorong dalam semangat kebersamaan.</p>
+          <button class="btn-baca">Baca Selengkapnya &#8594;</button>
+        </div>
+      </article>
+
+      <!-- Berita 2 -->
+      <article class="berita-card reveal">
+        <div class="berita-thumb">
+          <!-- gambar9.png = berita 2; ganti dengan foto asli -->
+          <img src="assets/images/gambar9.png" alt="Berita 2" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="berita-category" style="color:#1d4ed8;">Kesehatan</span>
+        </div>
+        <div class="berita-body">
+          <div class="berita-date">📅 10 Mei 2025</div>
+          <h3 class="berita-title">Posyandu Nagari Layani 120 Balita</h3>
+          <p class="berita-excerpt">Kegiatan Posyandu bulan ini berhasil melayani 120 balita dan ibu hamil dengan pemeriksaan gizi, imunisasi, dan penyuluhan kesehatan.</p>
+          <button class="btn-baca">Baca Selengkapnya &#8594;</button>
+        </div>
+      </article>
+
+      <!-- Berita 3 -->
+      <article class="berita-card reveal">
+        <div class="berita-thumb">
+          <!-- gambar10.png = berita 3; ganti dengan foto asli -->
+          <img src="assets/images/gambar10.png" alt="Berita 3" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="berita-category" style="color:#a16207;">Pemerintahan</span>
+        </div>
+        <div class="berita-body">
+          <div class="berita-date">📅 5 Mei 2025</div>
+          <h3 class="berita-title">Musyawarah Nagari Bahas Anggaran 2025</h3>
+          <p class="berita-excerpt">Musyawarah nagari dihadiri oleh tokoh masyarakat untuk membahas prioritas penggunaan dana nagari tahun 2025.</p>
+          <button class="btn-baca">Baca Selengkapnya &#8594;</button>
+        </div>
+      </article>
+
+      <!-- Berita 4 -->
+      <article class="berita-card reveal">
+        <div class="berita-thumb">
+          <!-- gambar11.png = berita 4; ganti dengan foto asli -->
+          <img src="assets/images/gambar11.png" alt="Berita 4" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+          <span class="berita-category" style="color:#7c3aed;">Budaya</span>
+        </div>
+        <div class="berita-body">
+          <div class="berita-date">📅 1 Mei 2025</div>
+          <h3 class="berita-title">Festival Budaya Minangkabau 2025</h3>
+          <p class="berita-excerpt">Festival budaya tahunan digelar meriah dengan penampilan randai, tari piring, pertunjukan saluang, dan pameran kuliner tradisional.</p>
+          <button class="btn-baca">Baca Selengkapnya &#8594;</button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERI SECTION
+     ============================================================ -->
+<section id="galeri">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+
+    <!-- Section Header -->
+    <div class="section-header reveal">
+      <div class="section-badge">Dokumentasi</div>
+      <h2 class="section-title">Galeri <span>Nagari</span></h2>
+      <p class="section-desc">
+        Momen-momen berharga kehidupan dan kegiatan masyarakat Nagari Silongo.
+      </p>
+    </div>
+
+    <!-- Gallery Masonry Grid -->
+    <div class="galeri-grid">
+
+      <!-- Item 1 - TALL -->
+      <div class="galeri-item tall reveal">
+        <!-- gambar12.png = galeri 1; ganti dengan foto asli -->
+        <img src="assets/images/gambar12.png" alt="Galeri 1" class="galeri-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;" />
+        <div class="galeri-overlay">
+          <span class="galeri-zoom-icon">&#128269;</span>
+        </div>
+        <div class="galeri-label">Panen Raya</div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="galeri-item reveal">
+        <!-- gambar13.png = galeri 2; ganti dengan foto asli -->
+        <img src="assets/images/gambar13.png" alt="Galeri 2" class="galeri-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;" />
+        <div class="galeri-overlay">
+          <span class="galeri-zoom-icon">&#128269;</span>
+        </div>
+        <div class="galeri-label">Upacara Adat</div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="galeri-item reveal">
+        <!-- gambar14.png = galeri 3; ganti dengan foto asli -->
+        <img src="assets/images/gambar14.png" alt="Galeri 3" class="galeri-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;" />
+        <div class="galeri-overlay">
+          <span class="galeri-zoom-icon">&#128269;</span>
+        </div>
+        <div class="galeri-label">Musyawarah Nagari</div>
+      </div>
+
+      <!-- Item 4 - TALL -->
+      <div class="galeri-item tall reveal">
+        <!-- gambar15.png = galeri 4; ganti dengan foto asli -->
+        <img src="assets/images/gambar15.png" alt="Galeri 4" class="galeri-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;" />
+        <div class="galeri-overlay">
+          <span class="galeri-zoom-icon">&#128269;</span>
+        </div>
+        <div class="galeri-label">Rumah Gadang</div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="galeri-item reveal">
+        <!-- gambar16.png = galeri 5; ganti dengan foto asli -->
+        <img src="assets/images/gambar16.png" alt="Galeri 5" class="galeri-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;" />
+        <div class="galeri-overlay">
+          <span class="galeri-zoom-icon">&#128269;</span>
+        </div>
+        <div class="galeri-label">Festival Budaya</div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="galeri-item reveal">
+        <!-- gambar17.png = galeri 6; ganti dengan foto asli -->
+        <img src="assets/images/gambar17.png" alt="Galeri 6" class="galeri-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;" />
+        <div class="galeri-overlay">
+          <span class="galeri-zoom-icon">&#128269;</span>
+        </div>
+        <div class="galeri-label">Gotong Royong</div>
+      </div>
+
+      <!-- Item 7 - TALL -->
+      <div class="galeri-item tall reveal">
+        <!-- gambar18.png = galeri 7; ganti dengan foto asli -->
+        <img src="assets/images/gambar18.png" alt="Galeri 7" class="galeri-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;" />
+        <div class="galeri-overlay">
+          <span class="galeri-zoom-icon">&#128269;</span>
+        </div>
+        <div class="galeri-label">Posyandu</div>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="galeri-item reveal">
+        <!-- gambar19.png = galeri 8; ganti dengan foto asli -->
+        <img src="assets/images/gambar19.png" alt="Galeri 8" class="galeri-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;" />
+        <div class="galeri-overlay">
+          <span class="galeri-zoom-icon">&#128269;</span>
+        </div>
+        <div class="galeri-label">Kesenian Daerah</div>
+      </div>
+
+      <!-- Item 9 -->
+      <div class="galeri-item reveal">
+        <!-- gambar20.png = galeri 9; ganti dengan foto asli -->
+        <img src="assets/images/gambar20.png" alt="Galeri 9" class="galeri-bg" style="object-fit:cover;width:100%;height:100%;position:absolute;inset:0;" />
+        <div class="galeri-overlay">
+          <span class="galeri-zoom-icon">&#128269;</span>
+        </div>
+        <div class="galeri-label">Sawah Hijau</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     KONTAK SECTION
+     ============================================================ -->
+<section id="kontak">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+
+    <!-- Section Header -->
+    <div class="section-header reveal">
+      <div class="section-badge">Hubungi Kami</div>
+      <h2 class="section-title">Kontak <span>Nagari</span></h2>
+      <p class="section-desc">
+        Kami siap melayani dan menjawab pertanyaan Anda melalui saluran resmi berikut.
+      </p>
+    </div>
+
+    <div class="kontak-grid">
+
+      <!-- Contact Info -->
+      <div class="kontak-info reveal-left">
+
+        <!-- Alamat -->
+        <div class="kontak-item">
+          <div class="kontak-item-icon">📍</div>
+          <div>
+            <div class="kontak-item-label">Alamat</div>
+            <div class="kontak-item-value">Nagari Silongo, Kec. Lubuk Tarok, Kab. Sijunjung, Sumatera Barat</div>
+          </div>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="kontak-item">
+          <div class="kontak-item-icon">💬</div>
+          <div>
+            <div class="kontak-item-label">WhatsApp</div>
+            <div class="kontak-item-value">+62 812-3456-7890</div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="kontak-item">
+          <div class="kontak-item-icon">📧</div>
+          <div>
+            <div class="kontak-item-label">Email</div>
+            <div class="kontak-item-value">info@nagarisilong.desa.id</div>
+          </div>
+        </div>
+
+        <!-- Jam Layanan -->
+        <div class="kontak-item">
+          <div class="kontak-item-icon">🕐</div>
+          <div>
+            <div class="kontak-item-label">Jam Layanan</div>
+            <div class="kontak-item-value">Senin – Jumat, 08.00 – 16.00 WIB</div>
+          </div>
+        </div>
+
+        <!-- WhatsApp CTA Button -->
+        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-cta">
+          <span style="font-size:22px;">💬</span>
+          Hubungi via WhatsApp
+        </a>
+      </div>
+
+      <!-- Google Maps Embed -->
+      <div class="kontak-map reveal-right">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127400.12!2d100.95!3d-0.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4ba5b5b5b5b5b%3A0x1!2sLubuk+Tarok%2C+Sijunjung!5e0!3m2!1sen!2sid!4v1620000000000"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Peta Nagari Silongo">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="footer">
+  <div class="footer-grid">
+
+    <!-- Brand Column -->
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">🌿</div>
+        <div>
+          <div class="footer-logo-text">Nagari Silongo</div>
+          <div class="footer-logo-sub">Pemerintah Nagari</div>
+        </div>
+      </div>
+      <p class="footer-brand-desc">
+        Portal informasi resmi Nagari Silongo, Kecamatan Lubuk Tarok, Kabupaten Sijunjung,
+        Sumatera Barat. Melayani dengan hati untuk masyarakat yang bermartabat.
+      </p>
+      <!-- Social Media Buttons -->
+      <div class="footer-social">
+        <a href="#" class="footer-social-btn" aria-label="Instagram">&#x1F4F7;</a>
+        <a href="#" class="footer-social-btn" aria-label="Facebook">&#x1F4D6;</a>
+        <a href="#" class="footer-social-btn" aria-label="YouTube">&#x1F4FA;</a>
+      </div>
+    </div>
+
+    <!-- Quick Links Column -->
+    <div>
+      <h4 class="footer-col-title">Menu Cepat</h4>
+      <ul class="footer-links">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#profil">Profil Nagari</a></li>
+        <li><a href="#pemerintahan">Pemerintahan</a></li>
+        <li><a href="#potensi">Potensi Desa</a></li>
+        <li><a href="#wisata">Wisata &amp; Budaya</a></li>
+        <li><a href="#berita">Berita</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Column -->
+    <div>
+      <h4 class="footer-col-title">Informasi Kontak</h4>
+      <ul class="footer-contact-list">
+        <li>
+          <span class="fc-icon">📍</span>
+          <span>Nagari Silongo, Kec. Lubuk Tarok, Kab. Sijunjung, Sumatera Barat</span>
+        </li>
+        <li>
+          <span class="fc-icon">💬</span>
+          <span>+62 812-3456-7890</span>
+        </li>
+        <li>
+          <span class="fc-icon">📧</span>
+          <span>info@nagarsilong.desa.id</span>
+        </li>
+        <li>
+          <span class="fc-icon">🕐</span>
+          <span>Senin – Jumat, 08.00 – 16.00 WIB</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer Bottom Bar -->
+  <div class="footer-bottom">
+    <p class="footer-copyright">
+      &copy; 2025 Pemerintah Nagari Silongo. Hak Cipta Dilindungi.
+    </p>
+    <p class="footer-copyright">
+      Kecamatan Lubuk Tarok, Kabupaten Sijunjung, Sumatera Barat
+    </p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     FLOATING BUTTONS
+     ============================================================ -->
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer"
+   class="floating-wa" aria-label="Chat WhatsApp">
+  &#128172;
+</a>
+
+<!-- Scroll To Top Button -->
+<button id="scrollTopBtn" class="floating-top" aria-label="Kembali ke atas">
+  &#8593;
+</button>
+
+<!-- ============================================================
+     MODALS / POPUP
+     ============================================================ -->
+
+<!-- PROFIL NAGARI MODAL -->
+<div class="modal-overlay" id="profilModal">
+  <div class="modal-box">
+    <div class="modal-header-banner" style="background:linear-gradient(135deg,#1a4731,#2d6b4a);">
+      <button class="modal-close" id="closeProfilModal">&#215;</button>
+    </div>
+    <div class="modal-body">
+      <h2 class="modal-title">Sejarah &amp; Profil Nagari Silongo</h2>
+      <div class="modal-content">
+        <p style="margin-bottom:16px;">
+          Nagari Silongo adalah kesatuan masyarakat hukum adat yang memiliki batas-batas wilayah tertentu,
+          berwenang untuk mengatur dan mengurus kepentingan masyarakat setempat berdasarkan asal-usul dan
+          adat istiadat Minangkabau yang diakui dalam sistem Pemerintahan NKRI.
+        </p>
+        <h3 style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:14px;padding-top:8px;border-top:1px solid #e5e7eb;">
+          Pembagian Wilayah (Jorong)
+        </h3>
+        <!-- Jorong Cards -->
+        <div class="jorong-card">
+          <div class="jorong-name">1. Jorong Koto Ranah</div>
+          <div class="jorong-desc">Merupakan pusat pemerintahan nagari dan pusat kegiatan ekonomi masyarakat yang bertumpu pada sektor pertanian dan perdagangan.</div>
+        </div>
+        <div class="jorong-card">
+          <div class="jorong-name">2. Jorong Pekolongan</div>
+          <div class="jorong-desc">Dikenal dengan keindahan alam perbukitannya serta tradisi masyarakat yang masih sangat kental dan terjaga dengan baik.</div>
+        </div>
+        <div class="jorong-card">
+          <div class="jorong-name">3. Jorong Ranah Laweh</div>
+          <div class="jorong-desc">Wilayah dengan potensi perkebunan dan peternakan yang berkembang pesat serta lanskap alam yang luas dan subur.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PEMERINTAHAN OFFICIAL MODAL -->
+<div class="modal-overlay" id="officialModal">
+  <div class="modal-box">
+    <div class="modal-body" style="text-align:center;padding-top:36px;">
+      <button class="modal-close" id="closeOfficialModal" style="position:relative;top:auto;right:auto;margin-left:auto;display:flex;margin-bottom:20px;background:#f3f4f6;color:#374151;">&#215;</button>
+      <div class="official-modal-avatar" id="officialModalInitials">AS</div>
+      <h2 class="modal-title" id="officialModalName" style="margin-bottom:6px;"></h2>
+      <p style="color:var(--primary);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-bottom:24px;" id="officialModalTitle"></p>
+      <div style="border-top:1px solid #e5e7eb;padding-top:20px;text-align:left;">
+        <p style="font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Tugas &amp; Fungsi</p>
+        <p class="modal-content" id="officialModalRole"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POTENSI DESA DETAIL MODAL -->
+<div class="modal-overlay" id="potensiModal">
+  <div class="modal-box">
+    <div class="modal-body" style="padding-top:36px;">
+      <button class="modal-close" id="closePotensiModal" style="position:relative;top:auto;right:auto;margin-left:auto;display:flex;margin-bottom:20px;background:#f3f4f6;color:#374151;">&#215;</button>
+      <div class="potensi-modal-icon" id="potensiModalIcon" style="background:#dcfce7;"></div>
+      <h2 class="modal-title" id="potensiModalTitle" style="text-align:center;"></h2>
+      <p class="modal-content" id="potensiModalDetail" style="text-align:center;margin-top:12px;"></p>
+    </div>
+  </div>
+</div>
+
+<!-- BERITA ARTICLE MODAL -->
+<div class="modal-overlay" id="beritaModal">
+  <div class="modal-box">
+    <div class="modal-header-banner" style="background:#15803d;">
+      <button class="modal-close" id="closeBeritaModal">&#215;</button>
+      <span class="modal-category-tag" style="color:#15803d;">Kegiatan</span>
+    </div>
+    <div class="modal-body">
+      <div class="modal-date"></div>
+      <h2 class="modal-title"></h2>
+      <p class="modal-content"></p>
+    </div>
+  </div>
+</div>
+
+<!-- WISATA LIGHTBOX -->
+<div class="lightbox-overlay" id="wisataLightbox">
+  <div class="lightbox-inner">
+    <div class="lightbox-bg" style="background:linear-gradient(135deg,#1a4731,#2d6b4a);"></div>
+    <div class="lightbox-meta">
+      <div class="lightbox-num"></div>
+      <div class="lightbox-title" style="margin-bottom:8px;"></div>
+      <p style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.7;"></p>
+    </div>
+    <button class="lightbox-close" id="closeLightbox">&#215;</button>
+  </div>
+</div>
+
+<!-- GALERI LIGHTBOX -->
+<div class="lightbox-overlay" id="galeriLightbox">
+  <div class="lightbox-inner">
+    <div class="lightbox-bg" style="background:linear-gradient(135deg,#166534,#4ade80);"></div>
+    <div class="lightbox-meta">
+      <div class="lightbox-num">1 / 9</div>
+      <div class="lightbox-title">Panen Raya</div>
+    </div>
+    <button class="lightbox-close" id="galeriLightboxClose">&#215;</button>
+  </div>
+  <button class="lightbox-nav-btn lightbox-nav-prev" id="galeriLightboxPrev">&#8592;</button>
+  <button class="lightbox-nav-btn lightbox-nav-next" id="galeriLightboxNext">&#8594;</button>
+</div>
+
+<!-- CUSTOM JAVASCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
